@@ -2,23 +2,32 @@
 <html lang="en">
 
 <head>
-   <meta charset="utf-8">
+   <meta charset="<?php bloginfo('charset'); ?>">
    <meta name="keywords" content="Streamlab - Video Streaming HTML5 Template" />
    <meta name="description" content="Streamlab - Video Streaming HTML5 Template" />
    <meta name="author" content="StreamLab" />
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <title>Streamlab - Video Streaming HTML5 Template</title>
+
+   <!-- Dynamic Title -->
+   <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
+
    <!-- Favicon -->
-   <link rel="shortcut icon" href="images/favicon.png">
-   <!-- CSS bootstrap-->
-   <link rel="stylesheet" href="css/bootstrap.min.css" />
-   <!--  Style -->
-   <link rel="stylesheet" href="css/style.css" />
-   <!--  Responsive -->
-   <link rel="stylesheet" href="css/responsive.css" />
+   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png">
+
+   <!-- WordPress-Style CSS Bootstrap-->
+   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" />
+   
+   <!-- Main Style -->
+   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
+
+   <!-- Responsive Styles -->
+   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css" />
+
+   <!-- Required WordPress head -->
+   <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
    <!--=========== Loader =============-->
    <div id="gen-loading">
