@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php wp_head(); ?>
 <head>
    <meta charset="<?php bloginfo('charset'); ?>">
    <meta name="keywords" content="Streamlab - Video Streaming HTML5 Template" />
@@ -3377,7 +3377,7 @@
 
    <script src="js/script.js"></script>
 
-
+<?php wp_footer(); ?>
 </body>
 
 </html>
