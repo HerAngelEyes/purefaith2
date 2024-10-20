@@ -2990,7 +2990,7 @@
    </section>
    <!-- owl-carousel Videos Section-4 End -->
 
-  SARA HERE
+<?php get_footer(); ?>
 
    <!-- Back-to-Top start -->
    <div id="back-to-top">
