@@ -1,5 +1,7 @@
 <?php
- <!-- footer start -->
+// PHP code can go here
+?>
+<!-- HTML code can go here -->
    <footer id="gen-footer">
       <div class="gen-footer-style-1">
          <div class="gen-footer-top">
