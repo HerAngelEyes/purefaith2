@@ -1,7 +1,10 @@
 <?php
-// PHP code can go here
+// Ensure this file is being called by WordPress
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+}
 ?>
-<!-- HTML code can go here -->
+<!-- HTML code for footer -->
 <footer id="gen-footer">
     <div class="gen-footer-style-1">
         <div class="gen-footer-top">
@@ -11,7 +14,7 @@
                         <div class="widget">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <img src="images/logo-1.png" class="gen-footer-logo" alt="gen-footer-logo">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/logo-1.png" class="gen-footer-logo" alt="gen-footer-logo">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                     <ul class="social-link">
                                         <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
@@ -28,12 +31,10 @@
                             <h4 class="footer-title">Explore</h4>
                             <div class="menu-explore-container">
                                 <ul class="menu">
-                                    <li class="menu-item">
-                                        <a href="index.html" aria-current="page">Home</a>
-                                    </li>
-                                    <li class="menu-item"><a href="movies-pagination.html">Movies</a></li>
-                                    <li class="menu-item"><a href="tv-shows-pagination.html">TV Shows</a></li>
-                                    <li class="menu-item"><a href="video-pagination.html">Videos</a></li>
+                                    <li class="menu-item"><a href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
+                                    <li class="menu-item"><a href="<?php echo esc_url(home_url('/movies-pagination')); ?>">Movies</a></li>
+                                    <li class="menu-item"><a href="<?php echo esc_url(home_url('/tv-shows-pagination')); ?>">TV Shows</a></li>
+                                    <li class="menu-item"><a href="<?php echo esc_url(home_url('/video-pagination')); ?>">Videos</a></li>
                                     <li class="menu-item"><a href="#">Actors</a></li>
                                     <li class="menu-item"><a href="#">Basketball</a></li>
                                     <li class="menu-item"><a href="#">Celebrity</a></li>
@@ -47,14 +48,14 @@
                             <h4 class="footer-title">Company</h4>
                             <div class="menu-about-container">
                                 <ul class="menu">
-                                    <li class="menu-item"><a href="contact-us.html">Company</a></li>
-                                    <li class="menu-item"><a href="privacy-policy.html">Privacy Policy</a></li>
-                                    <li class="menu-item"><a href="terms-of-use.html">Terms of Use</a></li>
-                                    <li class="menu-item"><a href="help-center.html">Help Center</a></li>
-                                    <li class="menu-item"><a href="contact-us.html">Contact Us</a></li>
-                                    <li class="menu-item"><a href="pricing-style-1.html">Subscribe</a></li>
+                                    <li class="menu-item"><a href="<?php echo esc_url(home_url('/contact-us')); ?>">Company</a></li>
+                                    <li class="menu-item"><a href="<?php echo esc_url(home_url('/privacy-policy')); ?>">Privacy Policy</a></li>
+                                    <li class="menu-item"><a href="<?php echo esc_url(home_url('/terms-of-use')); ?>">Terms of Use</a></li>
+                                    <li class="menu-item"><a href="<?php echo esc_url(home_url('/help-center')); ?>">Help Center</a></li>
+                                    <li class="menu-item"><a href="<?php echo esc_url(home_url('/contact-us')); ?>">Contact Us</a></li>
+                                    <li class="menu-item"><a href="<?php echo esc_url(home_url('/pricing-style-1')); ?>">Subscribe</a></li>
                                     <li class="menu-item"><a href="#">Our Team</a></li>
-                                    <li class="menu-item"><a href="faq.html">FAQ</a></li>
+                                    <li class="menu-item"><a href="<?php echo esc_url(home_url('/faq')); ?>">FAQ</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -66,10 +67,10 @@
                                 <div class="col-sm-12">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                     <a href="#">
-                                        <img src="images/asset-35.png" class="gen-playstore-logo" alt="playstore">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/asset-35.png" class="gen-playstore-logo" alt="playstore">
                                     </a>
                                     <a href="#">
-                                        <img src="images/asset-36.png" class="gen-appstore-logo" alt="appstore">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/asset-36.png" class="gen-appstore-logo" alt="appstore">
                                     </a>
                                 </div>
                             </div>
