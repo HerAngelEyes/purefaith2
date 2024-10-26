@@ -42,7 +42,6 @@ function streamlab_widgets_init() {
 }
 add_action( 'widgets_init', 'streamlab_widgets_init' );
 
-// Register custom navigation walker for Bootstrap (optional, if using Bootstrap nav)
+// Register custom navigation walker for Bootstrap
 require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
-
 ?>
